@@ -134,14 +134,14 @@ class _MyWidgetState extends State<HomeScreen> {
         children: [
           Expanded(
             child: ListView.builder(
-              itemCount: 5,
+              itemCount: studentList.length,
               itemBuilder: (context,index){
                 return Card(
                   child: ListTile(
                     leading: Icon( Icons.person),
-                    title:Text("user Name"),
-                    subtitle:Text("Developer"),
-                    trailing:Icon(Icons.arrow_forward_ios_rounded),
+                    title:Text(studentList[index]["studentName"]!),
+                    subtitle:Text(studentList[index]["qualification"]!),
+                    trailing:const Icon(Icons.arrow_forward_ios_rounded),
                   ),
                 );
               }
